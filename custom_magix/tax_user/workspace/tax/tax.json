@@ -1,0 +1,207 @@
+{
+ "app": "custom_magix",
+ "charts": [],
+ "content": "[{\"id\":\"gyStMLV0Db\",\"type\":\"header\",\"data\":{\"text\":\"<br>\",\"col\":12}},{\"id\":\"WZhFkzw7aD\",\"type\":\"card\",\"data\":{\"card_name\":\"Buying & Selling\",\"col\":4}},{\"id\":\"0sU4mBwdUL\",\"type\":\"card\",\"data\":{\"card_name\":\"Tax Master\",\"col\":4}},{\"id\":\"vth5iOs0GV\",\"type\":\"card\",\"data\":{\"card_name\":\"Filling Tool Tax\",\"col\":4}}]",
+ "creation": "2025-03-18 12:43:50.618549",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "folder-open",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Tax",
+ "link_type": "DocType",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Buying & Selling",
+   "link_count": 4,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Sales Invoice",
+   "link_count": 0,
+   "link_to": "Sales Invoice",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Purchase Invoice",
+   "link_count": 0,
+   "link_to": "Purchase Invoice",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Payment Entry",
+   "link_count": 0,
+   "link_to": "Payment Entry",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Journal Entry",
+   "link_count": 0,
+   "link_to": "Journal Entry",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Tax Master",
+   "link_count": 4,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Purchase Taxes and Charges Template",
+   "link_count": 0,
+   "link_to": "Purchase Taxes and Charges Template",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Sales Taxes and Charges Template",
+   "link_count": 0,
+   "link_to": "Sales Taxes and Charges Template",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Tax Category",
+   "link_count": 0,
+   "link_to": "Tax Category",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Tax Rule",
+   "link_count": 0,
+   "link_to": "Tax Rule",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Filling Tool Tax",
+   "link_count": 6,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Generate Faktur Pajak",
+   "link_count": 0,
+   "link_to": "Generate Faktur Pajak",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Faktur Pajak",
+   "link_count": 0,
+   "link_to": "Faktur Pajak",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Kode Negara Pajak",
+   "link_count": 0,
+   "link_to": "Kode Negara Pajak",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Satuan Ukur Pajak",
+   "link_count": 0,
+   "link_to": "Satuan Ukur Pajak",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Sync Faktur Pajak Sales Invoice",
+   "link_count": 0,
+   "link_to": "Sync Faktur Pajak Sales Invoice",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "EFilling Tool",
+   "link_count": 0,
+   "link_to": "EFilling Tool",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2025-03-19 13:29:27.944221",
+ "modified_by": "Administrator",
+ "module": "Tax User",
+ "name": "Tax",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "Tax User"
+  },
+  {
+   "role": "Faktur Pajak"
+  }
+ ],
+ "sequence_id": 38.0,
+ "shortcuts": [],
+ "title": "Tax",
+ "type": "Workspace"
+}

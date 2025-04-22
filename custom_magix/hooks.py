@@ -1,8 +1,8 @@
 app_name = "custom_magix"
 app_title = "Custom Magix"
 app_publisher = "DAS"
-app_description = "DAS"
-app_email = "digitalasiasolusindo@gmail.com"
+app_description = "Custom Magix"
+app_email = "DAS@gmail.com"
 app_license = "mit"
 
 # Apps
@@ -70,9 +70,6 @@ app_license = "mit"
 # automatically create page for each record of this doctype
 # website_generators = ["Web Page"]
 
-# automatically load and sync documents of this doctype from downstream apps
-# importable_doctypes = [doctype_1]
-
 # Jinja
 # ----------
 
@@ -126,6 +123,14 @@ app_license = "mit"
 #
 # has_permission = {
 # 	"Event": "frappe.desk.doctype.event.event.has_permission",
+# }
+
+# DocType Class
+# ---------------
+# Override standard doctype classes
+
+# override_doctype_class = {
+# 	"ToDo": "custom_app.overrides.CustomToDo"
 # }
 
 # Document Events

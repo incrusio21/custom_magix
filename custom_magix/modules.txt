@@ -1,1 +1,10 @@
 Custom Magix
+AP
+AR
+Finance
+Tax User
+Sales
+Purchase
+Bank
+Cash
+Petty Cash
