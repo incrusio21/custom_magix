@@ -131,22 +131,6 @@ class PettyCash(BuyingController):
 			"Account", self.credit_to, ["account_type", "report_type", "account_currency"], as_dict=True
 		)
 
-		if account.report_type != "Balance Sheet":
-			frappe.throw(
-				_(
-					"Please ensure that the {0} account is a Balance Sheet account. You can change the parent account to a Balance Sheet account or select a different account."
-				).format(frappe.bold(_("Credit To"))),
-				title=_("Invalid Account"),
-			)
-
-		if self.supplier and account.account_type != "Payable":
-			frappe.throw(
-				_(
-					"Please ensure that the {0} account {1} is a Payable account. You can change the account type to Payable or select a different account."
-				).format(frappe.bold(_("Credit To")), frappe.bold(self.credit_to)),
-				title=_("Invalid Account"),
-			)
-
 		self.party_account_currency = account.account_currency
 
 	def validate_item_code(self):
@@ -324,10 +308,11 @@ class PettyCash(BuyingController):
 		super().on_cancel()
 
 		self.db_set("status", "Cancelled")
-		frappe.get_doc("Journal Entry", self.journal_entry).cancel()
-
-	def after_delete(self):
-		frappe.get_doc("Journal Entry", self.journal_entry).delete()
+		frappe.flags.remove_journal_entry = 1
+		for jv in frappe.get_all("Journal Entry", filters={"petty_cash": self.name, "docstatus": 1 }, pluck="name"):
+			doc = frappe.get_doc("Journal Entry", jv)
+			doc.cancel()
+			doc.delete()
 
 	def make_journal_entries(self):
 		if self.docstatus == 1:
@@ -338,6 +323,7 @@ class PettyCash(BuyingController):
 			doc = frappe.new_doc("Journal Entry")
 			doc.update({
 				"company": self.company,
+				"sales_order": self.sales_order,
 				"posting_date": self.posting_date,
 				"petty_cash": self.name,
 			})
@@ -368,7 +354,6 @@ class PettyCash(BuyingController):
 				doc.append("accounts", account_je)
 
 			doc.submit()
-			self.db_set("journal_entry", doc.name)
 
 	def get_gl_entries(self, warehouse_account=None):
 		self.auto_accounting_for_stock = erpnext.is_perpetual_inventory_enabled(self.company)
@@ -420,8 +405,8 @@ class PettyCash(BuyingController):
 		# Did not use base_grand_total to book rounding loss gle
 		gl = {
 			"account": self.credit_to,
-			"party_type": "Supplier",
-			"party": self.supplier,
+			# "party_type": "Supplier",
+			# "party": self.supplier,
 			"due_date": self.due_date,
 			"against": against_account or self.against_expense_account,
 			"credit": base_grand_total,

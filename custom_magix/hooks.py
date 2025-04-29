@@ -140,13 +140,16 @@ doctype_js = {
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-# 	}
-# }
+doc_events = {
+	# "*": {
+	# 	"on_update": "method",
+	# 	"on_cancel": "method",
+	# 	"on_trash": "method"
+	# }
+    "Journal Entry": {
+        "on_cancel": "custom_magix.custom_magix.custom.journal_entry.validate_petty_cash"
+    }
+}
 
 # Scheduled Tasks
 # ---------------

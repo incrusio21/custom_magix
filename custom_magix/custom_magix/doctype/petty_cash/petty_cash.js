@@ -53,15 +53,7 @@ magix.accounts.PettyCash = class PettyCash extends erpnext.buying.BuyingControll
 
 		// Ignore linked advances
 		this.frm.ignore_doctypes_on_cancel_all = [
-			"Journal Entry",
-			"Payment Entry",
-			"Purchase Invoice",
-			"Repost Payment Ledger",
-			"Repost Accounting Ledger",
-			"Unreconcile Payment",
-			"Unreconcile Payment Entries",
-			"Serial and Batch Bundle",
-			"Bank Transaction",
+			"Journal Entry"
 		];
 
 		if (!this.frm.doc.__islocal) {
@@ -401,7 +393,6 @@ cur_frm.fields_dict["credit_to"].get_query = function (doc) {
 	// filter on Account
 	return {
 		filters: {
-			account_type: "Payable",
 			is_group: 0,
 			company: doc.company,
 		},

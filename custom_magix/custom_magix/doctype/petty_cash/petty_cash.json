@@ -28,8 +28,7 @@
   "update_billed_amount_in_purchase_receipt",
   "apply_tds",
   "tax_withholding_category",
-  "journal_entry",
-  "amended_from",
+  "sales_order",
   "supplier_invoice_details",
   "bill_no",
   "column_break_15",
@@ -173,7 +172,8 @@
   "inter_company_invoice_reference",
   "is_old_subcontracting_flow",
   "remarks",
-  "connections_tab"
+  "connections_tab",
+  "amended_from"
  ],
  "fields": [
   {
@@ -351,14 +351,12 @@
   {
    "fieldname": "amended_from",
    "fieldtype": "Link",
-   "ignore_user_permissions": 1,
    "label": "Amended From",
    "no_copy": 1,
-   "oldfieldname": "amended_from",
-   "oldfieldtype": "Link",
    "options": "Petty Cash",
    "print_hide": 1,
-   "read_only": 1
+   "read_only": 1,
+   "search_index": 1
   },
   {
    "collapsible": 1,
@@ -1408,22 +1406,21 @@
    "show_dashboard": 1
   },
   {
-   "fieldname": "journal_entry",
+   "fieldname": "sales_order",
    "fieldtype": "Link",
    "ignore_user_permissions": 1,
-   "label": "Journal Entry",
+   "label": "Sales Order",
    "no_copy": 1,
    "oldfieldname": "amended_from",
    "oldfieldtype": "Link",
-   "options": "Journal Entry",
-   "print_hide": 1,
-   "read_only": 1
+   "options": "Sales Order",
+   "print_hide": 1
   }
  ],
  "icon": "fa fa-file-text",
  "is_submittable": 1,
  "links": [],
- "modified": "2025-04-28 11:20:28.914701",
+ "modified": "2025-04-29 09:16:58.788245",
  "modified_by": "Administrator",
  "module": "Custom Magix",
  "name": "Petty Cash",
